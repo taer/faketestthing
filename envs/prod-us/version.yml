@@ -1,0 +1,11 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pricing-poc-deployment
+spec:
+  template:
+    spec:
+      containers:
+      - name: pricing-poc
+        image: 534287151633.dkr.ecr.us-east-1.amazonaws.com/supply/pricing-poc:1.0

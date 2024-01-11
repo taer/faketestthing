@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pricing-poc-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pricing-poc
+  template:
+    metadata:
+      labels:
+        app: pricing-poc
+    spec:
+      containers:
+      - name: pricing-poc
+        imagePullPolicy: Always
+        image: fixme:0.0.0
+        ports:
+          - containerPort: 80

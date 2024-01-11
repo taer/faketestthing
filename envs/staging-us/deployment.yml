@@ -1,0 +1,13 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pricing-poc-deployment
+spec:
+  template:
+    spec:
+      containers:
+      - name: pricing-poc
+        env:
+        - name: ENV
+          value: "staging-us"
