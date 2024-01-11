@@ -8,11 +8,11 @@ resources:
 - ../../base
 
 components:
-  - ../../variants/non-prod
-  - ../../variants/us-east-1
+- ../../variants/non-prod
+- ../../variants/us-east-1
 
-patchesStrategicMerge:
-- deployment.yml
-- version.yml
-- replicas.yml
-- settings.yml
+patches:
+- path: deployment.yml
+- path: version.yml
+- path: replicas.yml
+- path: settings.yml

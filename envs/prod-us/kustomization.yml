@@ -8,15 +8,15 @@ resources:
 - ../../base
 
 components:
-  - ../../variants/prod
-  - ../../variants/us-east-1
+- ../../variants/prod
+- ../../variants/us-east-1
 
-patchesStrategicMerge:
-- deployment.yml
-- version.yml
-- replicas.yml
-- settings.yml
 
 images:
-  - name: 534287151633.dkr.ecr.us-east-1.amazonaws.com/supply/pricing-poc
-    newName: prodVersion.dkr.ecr.us-east-1.amazonaws.com/supply/pricing-poc
+- name: 534287151633.dkr.ecr.us-east-1.amazonaws.com/supply/pricing-poc
+  newName: prodVersion.dkr.ecr.us-east-1.amazonaws.com/supply/pricing-poc
+patches:
+- path: deployment.yml
+- path: version.yml
+- path: replicas.yml
+- path: settings.yml

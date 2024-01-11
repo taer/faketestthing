@@ -8,9 +8,9 @@ resources:
 - ../../base
 
 components:
-  - ../../variants/non-prod
+- ../../variants/non-prod
 
-patchesStrategicMerge:
-- deployment.yml
-- version.yml
-- settings.yml
+patches:
+- path: deployment.yml
+- path: version.yml
+- path: settings.yml
